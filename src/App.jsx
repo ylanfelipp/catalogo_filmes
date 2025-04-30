@@ -13,8 +13,7 @@ function App() {
             <main>
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/moviesdetails" element={<MovieDetails />} />
-                    <Route path="/minhalista" element={<MyList />} />
+                    <Route path="/moviesdetails/:id" element={<MovieDetails />} />
                 </Routes>
             </main>
         </div>

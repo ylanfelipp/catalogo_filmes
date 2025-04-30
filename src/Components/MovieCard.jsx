@@ -1,20 +1,25 @@
 import React from 'react'
+import { IMAGE_BASE_URL } from '../utils/Contantes'
 
-const MovieCard = () => {
+const MovieCard = ({ filme }) => {
     return (
-        <div className="relative">
+        <div className="relative mx-4 my-4 min-h-[25rem] min-w-[20rem]">
             <div className="rounded overflow-auto">
                 <img
-                    src="https://m.media-amazon.com/images/S/pv-target-images/5708edd5c8fc2c5b4a2ee3c96d289e281bd07cde4d2e7d2ad69973f9c7a48984.jpg"
-                    className="object-cover h-[15rem] w-[10rem]"
+                    src={`${IMAGE_BASE_URL}${filme.poster_path}`}
+                    className="object-cover min-h-[25rem] min-w-[20rem]"
                 />
             </div>
-            <div className="absolute inset-0 h-[15rem] w-[10rem] opacity-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
-                <div className="bg-black h-[15rem] w-[10rem] opacity-60"></div>
-                <img src="/play_circle.svg" className="absolute top-14 left-10 h-[5rem] w-[5rem]" />
-                <h2 className="text-center text-white-500 absolute bottom-[15%] left-[0.5%] text-[1rem] font-bold">
-                    Scott Pilgrim contra o Mundo
-                </h2>
+            <div className="absolute inset-0 min-h-[25rem] min-w-[20rem] opacity-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+                <div className="absolute inset-0 bg-black min-h-[25rem] min-w-[20rem] opacity-60"></div>
+                <div className="absolute top-[42%] left-[18%] min-h-[25rem] min-w-[20rem] text-center">
+                    <img src="/play_circle.svg" className="relative left-[25%] h-[10rem] w-[10rem]" />
+                    <div className="absolute text-center w-full">
+                        <h2 className="text-white-500 text-[2rem] font-bold">
+                            {filme.title}
+                        </h2>
+                    </div>
+                </div>
             </div>
         </div>
     )
