@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import MovieCard from './MovieCard'
-import { fetchPopularMovie } from '../utils/fetchMedia'
+import { fetchPopularMovies } from '../utils/fetchMedia'
 
 const MovieList = () => {
     const [filmes, setFilmes] = useState([])
     useEffect(() => {
-        fetchPopularMovie()
+        fetchPopularMovies()
             .then(filmes => {
                 setFilmes(filmes)
             })
@@ -14,8 +14,8 @@ const MovieList = () => {
 
     return (
         <div className="flex flex-wrap items-center justify-center my-4 mx-4 p-6 h-full">
-            {filmes.map((filme, index) => (
-                <MovieCard filme={filme} key={index} />
+            {filmes.map((filme) => (
+                <MovieCard filme={filme} key={filme.id} />
             ))}
         </div>
     )

@@ -1,9 +1,11 @@
 import React from 'react'
 import { IMAGE_BASE_URL } from '../utils/Contantes'
+import { useNavigate } from 'react-router-dom'
 
 const MovieCard = ({ filme }) => {
+    const navigate = useNavigate()
     return (
-        <div className="relative mx-4 my-4 min-h-[25rem] min-w-[20rem]">
+        <div className="relative mx-4 my-4 min-h-[25rem] min-w-[20rem]" onClick={() =>  navigate(`/moviesdetails/${filme.id}`)}>
             <div className="rounded overflow-auto">
                 <img
                     src={`${IMAGE_BASE_URL}${filme.poster_path}`}
