@@ -3,6 +3,7 @@ import Home from "./Pages/Home"
 import MovieDetails from "./Pages/MovieDetails"
 import Navbar from "./Components/Navbar"
 import MyList from "./Pages/MyList"
+import MovieCardMyList from "./Components/MovieCardMyList"
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/moviesdetails/:id" element={<MovieDetails />} />
+                    <Route path="/minhalista" element={<MyList />} />
                 </Routes>
             </main>
         </div>

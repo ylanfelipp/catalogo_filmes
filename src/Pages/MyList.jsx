@@ -1,9 +1,10 @@
 import React from 'react'
+import MovieListMyList from '../Components/MovieListMyList'
 
 const MyList = () => {
     return (
-        <div>
-            
+        <div className="bg-black-500 h-screen">
+            <MovieListMyList />
         </div>
     )
 }
