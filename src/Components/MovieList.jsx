@@ -16,8 +16,11 @@ const MovieList = () => {
     return (
         <div>
             <div className="flex justify-center items-center gap-3">
-                <button 
-                    type="button" onClick={() => setPage(page => page - 1)} 
+                <button
+                    type="button" onClick={() => setPage(page => {
+                        if ((page - 1) < 1) return 1
+                        return page - 1
+                    })}
                     className="button-page">
                     Anterior
                 </button>
@@ -31,8 +34,11 @@ const MovieList = () => {
                 ))}
             </div>
             <div className="flex justify-center items-center gap-3">
-                <button 
-                    type="button" onClick={() => setPage(page => page - 1)} 
+                <button
+                    type="button" onClick={() => setPage(page => {
+                        if ((page - 1) < 1) return 1
+                        return page - 1
+                    })}
                     className="button-page">
                     Anterior
                 </button>
