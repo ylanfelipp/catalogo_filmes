@@ -3,7 +3,6 @@ import Home from "./Pages/Home"
 import MovieDetails from "./Pages/MovieDetails"
 import Navbar from "./Components/Navbar"
 import MyList from "./Pages/MyList"
-import MovieCardMyList from "./Components/MovieCardMyList"
 
 function App() {
     return (
