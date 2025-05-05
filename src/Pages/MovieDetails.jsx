@@ -26,7 +26,7 @@ const MovieDetails = () => {
 
     return (
         <>
-            {filme && <div className="h-screen flex justify-around items-center bg-black-500">
+            {filme && <div className="min-h-screen flex justify-around items-center bg-black-500 p-8">
                 <div className="">
                     <img
                         src={`${IMAGE_BASE_URL}${filme.poster_path}`}

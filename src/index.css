@@ -10,3 +10,7 @@
     --color-red-600: #B81D24;
     --color-red-400: #E50914;
 }
+
+.button-page {
+    @apply bg-red-500 h-[2rem] w-[10rem] rounded cursor-pointer text-2xl text-white-500
+}
